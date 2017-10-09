@@ -18,14 +18,14 @@
       <option value="INR">INR</option>
       <option value="EUR">EUR</option>
     </select>
-    <input type="submit" value="Click to send">
+    <!--<input type="submit" value="Click to send">-->
   </form>
 
   <script>
     function dopost() {
       var win = window.parent;
       win.postMessage(document.getElementById('message').value, '*');
-      alert(document.getElementById('message').value);
+      console.log(document.getElementById('message').value);
       return false;      
     }
   </script>
