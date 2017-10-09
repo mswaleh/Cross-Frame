@@ -24,6 +24,7 @@
     form.onsubmit = function() {
       var win = window.parent;
       win.postMessage(document.getElementById('message').value, '*');
+      console.log(document.getElementById('message').value);
       return false;
     };
   </script>
