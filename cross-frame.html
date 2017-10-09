@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <body>
@@ -10,7 +11,7 @@
   
   <form id="form">
     <!--<input name="message" placeholder="Enter message" type="text">-->
-    <select name="message" id="message">
+    <select name="message" id="message" onchange="dopost()">
       <option value="">--select--</option>
       <option value="USD">USD</option>
       <option value="GBP">GBP</option>
@@ -21,12 +22,12 @@
   </form>
 
   <script>
-    form.onsubmit = function() {
+    function dopost() {
       var win = window.parent;
       win.postMessage(document.getElementById('message').value, '*');
-      console.log(document.getElementById('message').value);
-      return false;
-    };
+      alert(document.getElementById('message').value);
+      return false;      
+    }
   </script>
 
 
