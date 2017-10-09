@@ -10,7 +10,7 @@
   
   <form id="form">
     <!--<input name="message" placeholder="Enter message" type="text">-->
-    <select name="message">
+    <select name="message" id="message">
       <option value="">--select--</option>
       <option value="USD">USD</option>
       <option value="GBP">GBP</option>
@@ -23,7 +23,7 @@
   <script>
     form.onsubmit = function() {
       var win = window.parent;
-      win.postMessage(this.message.value, '*');
+      win.postMessage(document.getElementById('message').value, '*');
       return false;
     };
   </script>
