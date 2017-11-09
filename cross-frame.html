@@ -26,7 +26,7 @@
     function dopost() {
       var win = window.parent;
       win.postMessage(document.getElementById('message').value, '*');
-      console.log(document.getElementById('message').value);
+      console.log(JSON.parse('{"currency":"' + document.getElementById('message').value} + '"));
       return false;      
     }
   </script>
